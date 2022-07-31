@@ -1,0 +1,236 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.canvas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fcf1f1;
+    width: 100%;
+    height: 100vh;
+}
+
+.circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vmin;
+    height: 80vmin;
+    border-radius: 50%;
+    background: #f9e0ae;
+}
+
+.pot {
+    position: absolute;
+    border-bottom: 25vmin solid #835050;
+    border-left: 10vmin solid transparent;
+    border-right: 10vmin solid transparent;
+    height: 0;
+    width: 40vmin;
+    bottom: 13vmin;
+    transform: rotate(180deg);
+    border-radius: 3vmin;
+}
+
+.pot::after {
+    content: "";
+    position: absolute;
+    width: 20vmin;
+    height: 1vmin;
+    background: black;
+}
+
+.eyes {
+    position: absolute;
+    z-index: 1;
+    width: 4.5vmin;
+    height: 4.5vmin;
+    background: black;
+    border-radius: 50%;
+    bottom: -16vmin;
+    left: 1vmin;
+    box-shadow: 13vmin 0 #000;
+    animation: blink 1.3s infinite;
+}
+
+@keyframes blink {
+    0% {transform: scale(1,0.5)}
+    100% {transform: scale(1,1)}
+}
+
+.cheeks {
+    position: absolute;
+    z-index: 0;
+    height: 2.2vmin;
+    width: 5vmin;
+    background: red;
+    border-radius: 50%;
+    top: 9.7vmin;
+    left: -1vmin;
+    box-shadow: 16vmin 0 red;
+}
+
+.mouth {
+    position: absolute;
+    height: 4vmin;
+    width: 4vmin;
+    left: 7.5vmin;
+    top: 7.3vmin;
+    border-radius: 50%;
+    background: transparent;
+    border-top: 1vmin solid #000;
+}
+
+.cactus {
+    position: absolute;
+    width: 15vmin;
+    height: 30vmin;
+    top: 17vmin;
+    background: #799351;
+    border-radius: 45%;
+    left: 26.5vmin;
+    border: 1vmin solid #000;
+}
+
+.cactus::before {
+    content: "";
+    position: absolute;
+    width: 5vmin;
+    height: 30vmin;
+    left: 5.2vmin;
+    background: transparent;
+    border-radius: 50%;
+    border-right: 1vmin solid #335d2d;
+}
+
+.cactus::after {
+    content: "";
+    position: absolute;
+    width: 5vmin;
+    height: 30vmin;
+    left: 1.9vmin;
+    background: transparent;
+    border-radius: 50%;
+    border-left: 1vmin solid #335d2d;
+
+}
+
+.cactusSmall {
+    position: absolute;
+    width: 16.5vmin;
+    height: 20vmin;
+    border-radius: 45%;
+    background: #799351;
+    border: 1vmin solid #000;
+    top: 27vmin;
+    left: 36vmin;
+}
+
+.cactusSmall::before {
+    content: "";
+    position: absolute;
+    width: 5vmin;
+    height: 21vmin;
+    left: 6.3vmin;
+    background: transparent;
+    border-radius: 50%;
+    border-right: 1vmin solid #335d2d;
+}
+
+.cactusSmall::after {
+    content: "";
+    position: absolute;
+    width: 5vmin;
+    height: 20vmin;
+    left: 2.5vmin;
+    background: transparent;
+    border-radius: 50%;
+    border-left: 1vmin solid #335d2d;
+
+}
+
+.pricks {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 7vmin solid #335d2d;
+    transform: rotate(-45deg);
+    z-index: 2;
+    left: -1vmin;
+    top: 1vmin;
+} 
+
+.pricks::before {
+    content: "";
+    position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 1vmin solid transparent;
+        border-right: 1vmin solid transparent;
+        border-bottom: 7vmin solid #335d2d;
+        transform: rotate(90deg);
+        z-index: 2;
+        left: 10vmin;
+        top: 5.5vmin;
+}
+
+.pricks::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 7vmin solid #335d2d;
+    z-index: 2;
+    right: 7.3vmin;
+    top: 7vmin;
+}
+
+.pricksRight {
+    position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 1vmin solid transparent;
+        border-right: 1vmin solid transparent;
+        border-bottom: 7vmin solid #335d2d;
+        transform: rotate(-45deg);
+        z-index: 2;
+        left: -1vmin;
+        top: -2vmin;
+}
+
+.pricksRight::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 7vmin solid #335d2d;
+    transform: rotate(86deg);
+    z-index: 2;
+    left: 8vmin;
+    top: 14vmin;
+}
+
+.pricksRight::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 7vmin solid #335d2d;
+    transform: rotate(62deg);
+    z-index: 2;
+    left: 9vmin;
+    top: 4vmin;
+}
